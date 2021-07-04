@@ -17,7 +17,6 @@ body {
     color: #f6f6f5;
     justify-content: space-between;
     align-items: center;
-    flex: 1; 
     flex-wrap: wrap;
 }
 
@@ -27,12 +26,17 @@ body {
     flex: 1;
 }
 
-.header h1 .last-name {
+.header h1 {
     color: #f6f6f5;
-    flex: 1;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 } 
 
-.header div {
+/* .header div {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -40,14 +44,24 @@ body {
     font-size: 20px;
     flex: 1;
 }
+*/
 
 .header div ul {
-    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: #f6f6f5 !important;
+
 }
 
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
+    color: #f6f6f5 !important;
+
+
 }
 
 /* HEADER END */
@@ -57,11 +71,25 @@ body {
 
 }
 
+/*link color */
 
-a {
-    color: #f6f6f5;
+a:link {
+
+    color: #4b4544;
     text-decoration: none;
 }
+
+a:hover {
+    color: #9ea09d;
+    text-decoration: none;
+}
+
+a:visited {
+    color:#4b4544;
+    text-decoration: none;
+}
+
+/*link color end */
 
 p {
     font-size: 16px;
@@ -82,8 +110,13 @@ p {
 .float-left {
     float: left;
     margin-right: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: right;
+    list-style: none;
 }
-
+/*
 .float-right {
     float: right;
     margin-left: 25px;
@@ -92,13 +125,22 @@ p {
 /* ABOUT ME START */
 
 .content {
-    width: 75%;
-    display: inline-block;
+    width: 100%;
+
     margin-left: 20px;
+    margin-right: 50px;
+    padding-right: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: right;
+    list-style: none;
+    
+
     
 }
 
-.about-me, .projects {
+.about-me {
     margin-bottom: 20px;
     padding: 50px;
     height:fit-content;
@@ -108,15 +150,74 @@ p {
     border-radius: 25px; 
     flex: content;
     display: inline-block;  
+    width: auto;
+    
 }
 
-.about-me img, .projects img {
+.projects {
+    margin-bottom: 20px;
+    padding: 0px;
+    height:fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #9f816d;
+    border-radius: 25px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+    width:auto;
+
+}
+
+  /* zoom animation for hover over image */
+
+  .zoom {
+    padding: 50px;
+    transition: transform .2s; /* Animation */
+    width: 300x;
+    height: 300px;
+    margin: 0 auto;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.2);
+  }
+
+  /* Zoom animation end */
+
+.about-me img {
     max-height: 200px;
 }
 
 .about-me h2, .projects h2 {
-    margin-bottom: 20px;
+    margin-bottom: px;
     font-size: 36px;
+    color: #9ea09d
+}
+
+.projects h3 {
+    margin-bottom: 20px;
+    font-size: 23px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.projects article a img {
+    
+    max-height: 300px;
+}
+.projectArticle {
+    margin: 20px;
+    background-color: #f6f6f5;
+    color: var(--primary-color);
+    border-radius:25px;
+    flex: 11;
+    overflow: auto;
+
 }
 
 /* ABOUT ME END */
@@ -124,7 +225,9 @@ p {
 
 /* CONTACT START */
 
+/*
 .contact {
+    margin-top: 23px;
     margin-right: 10px;
     margin-left: 10px;
     padding: 20px;
@@ -136,8 +239,12 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #9f816d;
     border-radius: 25px;
-    position: -webkit-sticky;
-    position: sticky;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: right;
+    list-style: none;
 }
 
 .contact-me {
@@ -151,6 +258,37 @@ p {
 }
 
 /* CONTACT SECTION END*/
+
+/* FLEX CONTENT */
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  /* DISPLAY */
+.display-none {
+    display: none;
+  }
+  
+.display-block {
+    display: block;
+  }
+  
+.display-inline-block {
+    display: inline-block;
+  }
+  
+.display-inline {
+    display: inline;
+  }
+
 
 
 
