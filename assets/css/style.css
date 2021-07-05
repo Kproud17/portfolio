@@ -8,6 +8,7 @@ body {
     background-color: #4b4544;
 }
 
+
 /* HEADER START */
 
 .header {
@@ -48,23 +49,21 @@ body {
     align-items: center;
     list-style: none;
     color: #f6f6f5 !important;
-
 }
 
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
     color: #f6f6f5 !important;
-
-
 }
+
 
 /* HEADER END */
 
 .flex-container {
     flex-shrink: inherit;
-
 }
+
 
 /*link color */
 
@@ -84,6 +83,7 @@ a:visited {
     text-decoration: none;
 }
 
+
 /*link color end */
 
 p {
@@ -93,8 +93,8 @@ p {
 h4 {
     font-weight: bold;
     color:#4b4544;
-
 }
+
 
 /* HERO START */
 
@@ -105,8 +105,8 @@ h4 {
     background-position: center;
 }
 
-/* HERO END */
 
+/* HERO END */
 
 .float-left {
     float: left;
@@ -117,11 +117,14 @@ h4 {
     align-items: right;
     list-style: none;
 }
+
+
 /*
 .float-right {
     float: right;
     margin-left: 25px;
 }
+
 
 /* ABOUT ME START */
 
@@ -135,10 +138,7 @@ h4 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: right;
-    list-style: none;
-    
-
-    
+    list-style: none;  
 }
 
 .about-me {
@@ -151,8 +151,7 @@ h4 {
     border-radius: 25px; 
     flex: content;
     display: inline-block;  
-    width: auto;
-    
+    width: auto;   
 }
 
 .about-me img {
@@ -164,8 +163,9 @@ h4 {
     font-size: 36px;
     color: #9ea09d
 }
-/* ABOUT ME END */
 
+
+/* ABOUT ME END */
 
 .projects {
     margin-bottom: 20px;
@@ -182,29 +182,35 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    
-
 }
 
 
   /* zoom animation for hover over image */
 
   .zoom {
-    padding: 25px;
+    padding: 10px;
     transition: transform .2s; /* Animation */
-    width: 300x;
-    height: 250px;
-    align-items: center;
+    width: 500px;
+    height: 375px;
     flex-wrap: wrap;
+
   }
   
-  .zoom:hover {
+
+  .zoom:hover, .zoom-one:hover {
     transform: scale(1.2);
   }
 
+  .zoom-one {
+    padding: 25px;
+    transition: transform .2s; /* Animation */
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   /* Zoom animation end */
-
-
 
 .projects h2 {
     margin-bottom: px;
@@ -217,7 +223,6 @@ h4 {
     margin-top: 0; 
     text-align: left;
 }
-
 
 .projectArticle {
     width: 100%;
@@ -232,14 +237,28 @@ h4 {
     justify-content: space-between;
     align-items: left;
     flex-wrap: wrap;
-
-
 }
 
+/* CONTACT ME */
 
+.contact-me {
+    margin-bottom: 20px;
+    padding: 60px;
+    height:fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f6f6f5;
+    color: #9f816d;
+    border-radius: 25px; 
+    flex: content;
+    display: inline-block;  
+    width: 100%;   
+}
 
-
-
+.contact-me h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+    color: #9ea09d
+}
 
 /* FLEX CONTENT */
 
@@ -253,7 +272,6 @@ h4 {
     flex-direction: column;
     flex-wrap: wrap;
   }
-
 
 
   /* DISPLAY */
@@ -274,11 +292,7 @@ h4 {
   }
 
 
-
-
-
   /* MEDIA QUERIES */
-
 
   @media screen and (max-width: 980px) {
 
@@ -290,10 +304,17 @@ h4 {
         justify-content: center;
         position: relative;
     }
-    .about-me h2, .about-me p {
+    .about-me h2, .about-me p, .contact-me h2, .contact-me p {
         text-align:  center;
     }
     .float-left {
+        float: none;
+        margin-right: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: right;
+        list-style: none;
         margin-left: auto;
         margin-right: auto;
         display: block;
