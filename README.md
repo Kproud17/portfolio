@@ -9,7 +9,8 @@ A Professional Portfolio (website) to display various projects worked on.
 
 ## Contents
 * [Screenshots] 
-* [Questions] 
+* [Questions]
+* [Deployed Links]
 
 
 ## Screenshots 
@@ -21,3 +22,8 @@ A Professional Portfolio (website) to display various projects worked on.
 ## Questions
 
 If you have any questions please contact me @ KristenMProud@gmail.com
+
+## Deployed Links
+
+git@github.com:Kproud17/portfolio.git
+https://github.com/Kproud17/portfolio.git
