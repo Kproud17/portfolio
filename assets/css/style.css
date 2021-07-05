@@ -11,13 +11,18 @@ body {
 /* HEADER START */
 
 .header {
-    padding: 20px;
+    width: 100%;
+    padding: 15px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #ca8e70;
     color: #f6f6f5;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 9999;
 }
 
 .header h1 {
@@ -35,16 +40,6 @@ body {
     align-items: center;
     list-style: none;
 } 
-
-/* .header div {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    flex: 1;
-}
-*/
 
 .header div ul {
     display: flex;
@@ -95,6 +90,12 @@ p {
     font-size: 16px;
 }
 
+h4 {
+    font-weight: bold;
+    color:#4b4544;
+
+}
+
 /* HERO START */
 
 .hero {
@@ -126,10 +127,10 @@ p {
 
 .content {
     width: 100%;
-
-    margin-left: 20px;
-    margin-right: 50px;
-    padding-right: 45px;
+    padding: 35px;
+    margin-left: 25px;
+    margin-right: 25px;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -142,7 +143,7 @@ p {
 
 .about-me {
     margin-bottom: 20px;
-    padding: 50px;
+    padding: 60px;
     height:fit-content;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #f6f6f5;
@@ -154,9 +155,20 @@ p {
     
 }
 
+.about-me img {
+    max-height: 200px;
+}
+
+.about-me h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+    color: #9ea09d
+}
+/* ABOUT ME END */
+
+
 .projects {
     margin-bottom: 20px;
-    padding: 0px;
     height:fit-content;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #9f816d;
@@ -165,21 +177,25 @@ p {
     flex-wrap: wrap;
     justify-content: space-around;
     overflow: auto;
-    width:auto;
+    width: 60%;
+    padding: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
 
 }
+
 
   /* zoom animation for hover over image */
 
   .zoom {
-    padding: 50px;
+    padding: 25px;
     transition: transform .2s; /* Animation */
     width: 300x;
-    height: 300px;
-    margin: 0 auto;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+    height: 250px;
+    align-items: center;
+    flex-wrap: wrap;
   }
   
   .zoom:hover {
@@ -188,76 +204,42 @@ p {
 
   /* Zoom animation end */
 
-.about-me img {
-    max-height: 200px;
-}
 
-.about-me h2, .projects h2 {
+
+.projects h2 {
     margin-bottom: px;
     font-size: 36px;
     color: #9ea09d
 }
 
 .projects h3 {
-    margin-bottom: 20px;
     font-size: 23px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
+    margin-top: 0; 
+    text-align: left;
 }
 
-.projects article a img {
-    
-    max-height: 300px;
-}
+
 .projectArticle {
-    margin: 20px;
+    width: 100%;
+    padding: 35px;
+    margin-left: 25px;
+    margin-right: 25px;
     background-color: #f6f6f5;
     color: var(--primary-color);
     border-radius:25px;
     flex: 11;
     overflow: auto;
-
-}
-
-/* ABOUT ME END */
-
-
-/* CONTACT START */
-
-/*
-.contact {
-    margin-top: 23px;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding: 20px;
-    clear: both;
-    float: left;
-    width: 20%;
-    height: fit-content;
     justify-content: space-between;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #9f816d;
-    border-radius: 25px;
-    overflow: auto;
-    display: flex;
+    align-items: left;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: right;
-    list-style: none;
+
+
 }
 
-.contact-me {
-    margin-bottom: 32px;
-    color: #f6f6f5;
-}
 
-.contact-me h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
 
-/* CONTACT SECTION END*/
+
+
 
 /* FLEX CONTENT */
 
@@ -271,6 +253,8 @@ p {
     flex-direction: column;
     flex-wrap: wrap;
   }
+
+
 
   /* DISPLAY */
 .display-none {
@@ -293,3 +277,40 @@ p {
 
 
 
+  /* MEDIA QUERIES */
+
+
+  @media screen and (max-width: 980px) {
+
+    section {
+        padding: 30px 15px;
+    }
+    header, .content, .projects {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    .about-me h2, .about-me p {
+        text-align:  center;
+    }
+    .float-left {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .zoom {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .projects p, .projects h4 {
+        text-align: center;
+        font-size: large;
+    }
+    .projects h3 {
+        text-align: center;
+        font-size:x-large;
+    }
+  }
